@@ -19,30 +19,10 @@ io.on('connection', (socket) => {
 
     socket.broadcast.emit('newMessage', generateMessage('Admin', 'New user joined'));
 
-    // socket.emit('newEmail', {
-    //     from: 'anshu@mail.com',
-    //     text: 'Hey whats up?',
-    //     createdAt: 123
-    // });
-
-    // socket.emit('newMessage', {
-    //     from: 'anjali@mail',
-    //     text: 'Hey!',
-    //     createdAt: 2133
-    // });
-
-    // socket.on('createEmail', (newEmail) => {
-    //     console.log('createEmail', newEmail);
-    // });
-
-    socket.on('createMessage', (message) => {
+    socket.on('createMessage', (message, callback) => {
         console.log('Message', message);
         io.emit('newMessage', generateMessage(message.from, message.text));
-        // socket.broadcast.emit('newMessage', {
-        //     from: message.from,
-        //     text: message.text,
-        //     createdAt: new Date().getTime()
-        // });
+        callback('This is from server.');
     });
 
     socket.on('disconnect', () => {
