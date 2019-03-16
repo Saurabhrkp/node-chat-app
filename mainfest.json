@@ -1,0 +1,16 @@
+{"dir" : "ltr",
+    "lang" : "en",
+    "name" : "Join | ChatApp",
+    "scope" : "/",
+    "display" : "browser",
+    "start_url" : "https://shielded-plateau-50667.herokuapp.com/",
+    "short_name" : "Join | ChatApp",
+    "theme_color" : "transparent",
+    "description" : "",
+    "orientation" : "any",
+    "background_color" : "transparent",
+    "related_applications" : "",
+    "prefer_related_applications" : "false",
+    "generated" : "true",
+    "icons" : [
+    ]}
